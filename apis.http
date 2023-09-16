@@ -1,0 +1,45 @@
+@BASE_URL = http://localhost:3000/api/contacts
+
+GET {{BASE_URL}}
+Content-Type: application/json
+
+
+### get all contacts
+GET {{BASE_URL}}
+Content-Type: application/json
+
+### get contact by id
+GET {{BASE_URL}}/65060af5e0a0603ec077a760
+Content-Type: application/json
+
+
+### export to csv
+GET {{BASE_URL}}/export
+Content-Type: application/json
+
+
+
+### create contact
+
+post {{BASE_URL}}
+Content-Type: application/json
+
+{
+    "ContactName": "Pinga Kumari",
+    "email": "jow@rawifa.bw",
+    "phone": "985746852"
+    
+}
+
+
+### update contact
+put {{BASE_URL}}/65060af5e0a0603ec077a760
+Content-Type: application/json
+
+{
+    "ContactName" : "Karishma AAi"
+}
+
+### delete contact
+DELETE {{BASE_URL}}/65060af5e0a0603ec077a760
+Content-Type: application/json
